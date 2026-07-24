@@ -110,3 +110,26 @@ function toggleDarkMode() {
     localStorage.setItem("theme", "light");
   }
 }
+
+//sends emails to backend
+document.getElementById('emailForm').addEventListener('submit', async (e) => {
+  e.preventDefault(); // Stop page from refreshing
+        
+  const emailValue = document.getElementById('userEmail').value;
+
+  try {
+      // Sends the data to your local Python server
+      const response = await fetch('http://127.0.0.1:5000/save-email', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email: emailValue })
+      });
+
+      const data = await response.json();
+      alert(data.message);
+      document.getElementById('emailForm').reset(); // Clear the form
+    } catch (error) {
+        console.error("Error connecting to Python backend:", error);
+        alert("Could not connect to the backend server.");
+    }
+});

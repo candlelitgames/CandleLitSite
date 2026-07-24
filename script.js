@@ -111,25 +111,22 @@ function toggleDarkMode() {
   }
 }
 
-//sends emails to backend
-document.getElementById('emailForm').addEventListener('submit', async (e) => {
-  e.preventDefault(); // Stop page from refreshing
-        
-  const emailValue = document.getElementById('userEmail').value;
+//Add emails to spreadsheet
+document.getElementById('sheetForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const emailValue = document.getElementById('userEmail').value;
+    
+    // REPLACE THIS WITH YOUR DEPLOYED GOOGLE WEB APP URL
+    const url = 'https://script.google.com/macros/s/AKfycbx6qjzjg8F1PPI5x4jtupG88BZlhS1bEzr-IC9gTNymVrzshjYt-JDqmBRponwBli2Q/exec'; 
 
-  try {
-      // Sends the data to your local Python server
-      const response = await fetch('http://127.0.0.1:5000/save-email', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ email: emailValue })
-      });
-
-      const data = await response.json();
-      alert(data.message);
-      document.getElementById('emailForm').reset(); // Clear the form
+    try {
+        await fetch(`${url}?email=${encodeURIComponent(emailValue)}`, {
+            method: 'POST'
+        });
+        alert("Email saved successfully!");
+        document.getElementById('sheetForm').reset();
     } catch (error) {
-        console.error("Error connecting to Python backend:", error);
-        alert("Could not connect to the backend server.");
+        console.error("Submission error:", error);
+        alert("Something went wrong saving the email.");
     }
 });

@@ -125,13 +125,25 @@ body {
     margin-top: auto;
 }
 
+#people {
+    display: flex;          /* Activates Flexbox layout */
+    flex-direction: row;    /* Places the 4 divs side-by-side */
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+    padding-bottom: 10px;
+}
+
 .person {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: flex-start;
     gap: 10px;
     background: #ed4040;
-    border-radius: 10px;
-    margin: 0 10px;
+    border-radius: 25px;
+    margin: 0;
+    width: 220px;
 }
 
 .person_img {
@@ -142,12 +154,37 @@ body {
 .person_role {
     padding-left: 8px;
     padding-right: 8px;
+    padding-bottom: 10px;
+    margin: 0;
+}
+
+.person_name {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: 0;
+}
+
+.not_micahs {
+    padding-bottom: 24px;
+}
+
+#micah_name {
+    padding-bottom: 0;
+    margin: 0;
+}
+
+#micah_role {
+    white-space: normal;
+    overflow-wrap: normal;
+    padding-top: 0;
+    margin: 0;
 }
 
 #micah_img {
     width: 180px;
     height: auto;
-    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 #itsuki_img {

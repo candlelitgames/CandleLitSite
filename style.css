@@ -1,5 +1,10 @@
+:root {
+    --font-scale: 1;
+}
+
 body {
     font-family: Arial, sans-serif;
+    font-size: 16px;
     text-align: center;
     min-height: 100vh;
     margin: 0;
@@ -27,7 +32,15 @@ body {
 
 .setting {
     position: relative;
-    left: -110px;
+    left: calc(-110px * var(--font-scale));
+}
+
+#fontChanger {
+    padding-left: 0;
+}
+
+#fontPlus {
+    padding: calc(4px * var(--font-scale)) calc(8px * var(--font-scale));
 }
 
 #logo {
@@ -38,17 +51,18 @@ body {
 #header {
     background: #ed4040;
     max-width: 100%;
-    min-height: 100px;
+    min-height: calc(100px * var(--font-scale));
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: flex-start;
-    gap: 10px;
-    padding: 0 12px;
+    gap: calc(10px * var(--font-scale));
+    padding: 0 calc(12px * var(--font-scale));
 }
 
 .content {
     display: inline-flex;
+    font-size: calc(32px * var(--font-scale));
 }
 
 #header.dark-foot,
@@ -65,7 +79,7 @@ body {
 .logo {
     width: 50px;
     height: auto;
-    margin-left: 10px;
+    margin-left: calc(10px * var(--font-scale));
 }
 
 #youtube {
@@ -78,22 +92,22 @@ body {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    margin-left: 10px;
-    margin-right: 15px;
+    margin-left: calc(10px * var(--font-scale));
+    margin-right: calc(15px * var(--font-scale));
 }
 
 #pages {
     color: white;
-    font-size: 20px;
+    font-size: calc(20px * var(--font-scale));
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: calc(12px * var(--font-scale));
     margin-left: auto;
     margin-right: 0;
 }
 
 #pages p {
-    margin: 0 12px;
+    margin: 0 calc(12px * var(--font-scale));
 }
 
 .linked {
@@ -106,22 +120,25 @@ body {
     align-items: center;
     justify-content: center;
     text-decoration: underline;
-    padding-top: 50px;
+    padding-top: calc(50px * var(--font-scale));
 }
 
 .info {
-    font-size: 20px;
+    font-size: calc(20px * var(--font-scale));
+    padding-left: calc(20px * var(--font-scale));
 }
+
+
 
 #footer {
     background: #ed4040;
     max-width: 100%;
-    min-height: 100px;
+    min-height: calc(100px * var(--font-scale));
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
-    padding: 0 12px;
+    gap: calc(10px * var(--font-scale));
+    padding: 0 calc(12px * var(--font-scale));
     margin-top: auto;
 }
 
@@ -130,8 +147,8 @@ body {
     flex-direction: row;    /* Places the 4 divs side-by-side */
     align-items: flex-start;
     justify-content: center;
-    gap: 20px;
-    padding-bottom: 10px;
+    gap: calc(20px * var(--font-scale));
+    padding-bottom: calc(10px * var(--font-scale));
 }
 
 .person {
@@ -139,33 +156,33 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    gap: 10px;
+    gap: calc(10px * var(--font-scale));
     background: #ed4040;
-    border-radius: 25px;
+    border-radius: calc(25px * var(--font-scale));
     margin: 0;
     width: 220px;
 }
 
 .person_img {
-    padding-top: 10px;
-    border-radius: 15px;
+    padding-top: calc(10px * var(--font-scale));
+    border-radius: calc(15px * var(--font-scale));
 }
 
 .person_role {
-    padding-left: 8px;
-    padding-right: 8px;
-    padding-bottom: 10px;
+    padding-left: calc(8px * var(--font-scale));
+    padding-right: calc(8px * var(--font-scale));
+    padding-bottom: calc(10px * var(--font-scale));
     margin: 0;
 }
 
 .person_name {
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: calc(5px * var(--font-scale));
+    padding-bottom: calc(5px * var(--font-scale));
     margin: 0;
 }
 
 .not_micahs {
-    padding-bottom: 24px;
+    padding-bottom: calc(24px * var(--font-scale));
 }
 
 #micah_name {
@@ -183,8 +200,8 @@ body {
 #micah_img {
     width: 180px;
     height: auto;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: calc(20px * var(--font-scale));
+    padding-right: calc(20px * var(--font-scale));
 }
 
 #itsuki_img {
@@ -195,15 +212,15 @@ body {
 #coderDev_img {
     width: 180px;
     height: auto;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: calc(20px * var(--font-scale));
+    padding-right: calc(20px * var(--font-scale));
 }
 
 #brayden_img {
     width: 180px;
     height: auto;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: calc(20px * var(--font-scale));
+    padding-right: calc(20px * var(--font-scale));
 }
 
 #pages.mobile {
@@ -218,9 +235,9 @@ body {
     background: transparent;
     border: 1px solid rgba(255,255,255,0.8);
     color: white;
-    font-size: 18px;
-    padding: 6px 10px;
-    border-radius: 8px;
+    font-size: calc(18px * var(--font-scale));
+    padding: calc(6px * var(--font-scale)) calc(10px * var(--font-scale));
+    border-radius: calc(8px * var(--font-scale));
     white-space: nowrap;
 }
 
@@ -230,10 +247,10 @@ body {
 
 #pages.mobile.open {
     align-items: flex-start;
-    gap: 6px;
-    padding: 8px;
+    gap: calc(6px * var(--font-scale));
+    padding: calc(8px * var(--font-scale));
     border: 1px solid rgba(255,255,255,0.8);
-    border-radius: 8px;
+    border-radius: calc(8px * var(--font-scale));
     background: rgba(255,255,255,0.06);
 }
 
@@ -242,9 +259,9 @@ body {
     width: 100%;
     text-align: left;
     background: rgba(255,255,255,0.12);
-    padding: 8px 10px;
+    padding: calc(8px * var(--font-scale)) calc(10px * var(--font-scale));
     border: 1px solid rgba(255,255,255,0.6);
-    border-radius: 8px;
+    border-radius: calc(8px * var(--font-scale));
     box-sizing: border-box;
 }
 

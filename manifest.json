@@ -1,0 +1,16 @@
+{
+  "name": "CandleLit Games",
+  "short_name": "CandleLit",
+  "description": "CandleLit Games website",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#ed4040",
+  "theme_color": "#ed4040",
+  "icons": [
+    {
+      "src": "./images/favicon.png",
+      "sizes": "500x500",
+      "type": "image/png"
+    }
+  ]
+}

@@ -1,15 +1,26 @@
 {
   "name": "CandleLit Games",
-  "short_name": "CandleLit Games",
+  "short_name": "CandleLit",
   "description": "CandleLit Games website",
   "start_url": ".",
+  "scope": ".",
   "display": "standalone",
   "background_color": "#000000",
   "theme_color": "#ed4040",
   "icons": [
     {
       "src": "./images/Logo/mobile_favicon.png",
-      "sizes": "500x500",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "./images/Logo/mobile_favicon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "./images/Logo/mobile_favicon.png",
+      "sizes": "512x512",
       "type": "image/png"
     }
   ]

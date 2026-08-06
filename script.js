@@ -117,7 +117,7 @@ document.getElementById('sheetForm').addEventListener('submit', async (e) => {
     const emailValue = document.getElementById('userEmail').value;
     
     // REPLACE THIS WITH YOUR DEPLOYED GOOGLE WEB APP URL
-    const url = 'https://script.google.com/macros/s/AKfycbx6qjzjg8F1PPI5x4jtupG88BZlhS1bEzr-IC9gTNymVrzshjYt-JDqmBRponwBli2Q/exec';
+    const url = 'https://script.google.com/macros/s/AKfycbx6qjzjg8F1PPI5x4jtupG88BZlhS1bEzr-IC9gTNymVrzshjYt-JDqmBRponwBli2Q/exec'; 
 
     try {
         await fetch(`${url}?email=${encodeURIComponent(emailValue)}`, {

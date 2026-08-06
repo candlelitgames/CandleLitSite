@@ -9,7 +9,7 @@ $(function() {
 
   if (window.mobileCheck()) {
     pages.addClass('mobile');
-    $('.info').css('left', '-10px');
+    $('.info').css('left', '-15px');
   }
 
   if (pages.hasClass('mobile')) {

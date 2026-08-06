@@ -4,7 +4,7 @@
   "description": "CandleLit Games website",
   "start_url": ".",
   "display": "standalone",
-  "background_color": "#ed4040",
+  "background_color": "#000000",
   "theme_color": "#ed4040",
   "icons": [
     {

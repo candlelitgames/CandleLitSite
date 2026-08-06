@@ -111,6 +111,8 @@ body {
 
 .info {
     font-size: 20px;
+    position: relative;
+    left: 0;
 }
 
 #footer {

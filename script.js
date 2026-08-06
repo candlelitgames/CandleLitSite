@@ -9,6 +9,7 @@ $(function() {
 
   if (window.mobileCheck()) {
     pages.addClass('mobile');
+    $('.info').css('left', '10px');
   }
 
   if (pages.hasClass('mobile')) {

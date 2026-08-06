@@ -27,20 +27,7 @@ body {
     align-self: flex-start;
     width: fit-content;
     margin: 0;
-    padding-left: 0;
-}
-
-.setting {
-    position: relative;
-    left: calc(-110px * var(--font-scale));
-}
-
-#fontChanger {
-    padding-left: 0;
-}
-
-#fontPlus {
-    padding: calc(4px * var(--font-scale)) calc(8px * var(--font-scale));
+    padding-right: 10px;
 }
 
 #logo {
@@ -125,10 +112,11 @@ body {
 
 .info {
     font-size: calc(20px * var(--font-scale));
-    padding-left: calc(20px * var(--font-scale));
+    padding-left: 465px;
+    text-align: left;
+    margin: 0;
+    align-self: flex-start;
 }
-
-
 
 #footer {
     background: #ed4040;

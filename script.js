@@ -35,19 +35,6 @@ function applyDarkFootToElements(elements, isDark) {
   });
 }
 
-function setFontScale(size) {
-  const clampedSize = Math.min(40, Math.max(12, Number(size) || 16));
-  document.body.style.fontSize = `${clampedSize}px`;
-  document.documentElement.style.setProperty("--font-scale", (clampedSize / 16).toFixed(3));
-
-  const fontSizeDisplay = document.getElementById("fontSize");
-  if (fontSizeDisplay) {
-    fontSizeDisplay.textContent = `${clampedSize}px`;
-  }
-
-  localStorage.setItem("fontSize", clampedSize);
-}
-
 // 1. Run this code as soon as the webpage loads
 document.addEventListener("DOMContentLoaded", () => {
   const body = document.body;
@@ -56,7 +43,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const header = document.getElementById("header");
   const footer = document.getElementById("footer");
   const people = document.querySelectorAll(".person");
-  const fontSizeDisplay = document.getElementById("fontSize");
   
   // 2. Check if the user previously saved a theme preference
   const savedTheme = localStorage.getItem("theme");
@@ -87,13 +73,6 @@ document.addEventListener("DOMContentLoaded", () => {
     if (checkbox) {
       checkbox.checked = false;
     }
-  }
-
-  const savedFontSize = Number(localStorage.getItem("fontSize"));
-  if (!Number.isNaN(savedFontSize) && savedFontSize) {
-    setFontScale(savedFontSize);
-  } else {
-    setFontScale(16);
   }
 
   applyDarkFootToElements(people, isDark);
@@ -151,33 +130,3 @@ document.getElementById('sheetForm').addEventListener('submit', async (e) => {
         alert("Something went wrong saving the email.");
     }
 });
-
-function adjustFontSize(increase) {
-  let bodySize = parseInt($('body').css('font-size'));
-  let fontChanger = $('#fontChanger');
-  let infoSize = parseInt($('.info').first().css('font-size'));
-  let infoPadding = parseInt($('.info').first().css('padding-left'));
-  let newBodySize = bodySize + (increase ? 1 : -1);
-  let newInfoSize = infoSize + (increase ? 1 : -1);
-  let newInfoPadding = infoPadding + (increase ? 1 : -1);
-  if (newBodySize < 12) {
-    newBodySize = 12;
-  }
-  if (newBodySize > 40) {
-    newBodySize = 40;
-  }
-  if (newInfoSize < 12) {
-    newInfoSize = 12;
-  }
-  if (newInfoSize > 40) {
-    newInfoSize = 40;
-  }
-  $('body').css('font-size', newBodySize + 'px');
-  $('.info').css('font-size', newInfoSize + 'px');
-  $('.info').css('padding-left', newInfoPadding + 'px');
-  fontChanger.css('padding-left', 0);
-  localStorage.setItem('fontSize', newBodySize);
-  localStorage.setItem('infoFontSize', newInfoSize);
-  localStorage.setItem('infoPadding', newInfoPadding);
-  localStorage.setItem('fontChanger', 0);
-}

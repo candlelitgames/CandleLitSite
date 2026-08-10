@@ -14,7 +14,7 @@ $(function() {
 
   if (window.mobileCheck()) {
     pages.addClass('mobile');
-    $('.info').css('left', '20px');
+    $('.info').css('left', '15px');
   }
 
   if (pages.hasClass('mobile')) {

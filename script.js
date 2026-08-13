@@ -14,7 +14,7 @@ $(function() {
 
   if (window.mobileCheck()) {
     pages.addClass('mobile');
-    $('.info').css('left', '-85px');
+    $('.info').css('left', '-50px');
     $('body').addClass('font-increase');
     $('.info').addClass('font-increase');
     $('#content').addClass('font-increase');

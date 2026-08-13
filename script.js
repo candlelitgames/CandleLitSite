@@ -14,7 +14,10 @@ $(function() {
 
   if (window.mobileCheck()) {
     pages.addClass('mobile');
-    $('.info').css('left', '10px');
+    $('.info').css('left', '-55px');
+    $('body').addClass('font-increase');
+    $('.info').addClass('font-increase');
+    $('#content').addClass('font-increase');
   }
 
   if (pages.hasClass('mobile')) {
